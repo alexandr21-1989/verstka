@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Дипломный проект</title>
+	<link rel="preload" href="fonts/roboto-v20-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/roboto-v20-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+	<!-- <link rel="preload" href="fonts/roboto-v20-latin_cyrillic-700.woff" as="font" type="font/woff2" crossorigin> -->
+	<link rel="preload" href="fonts/roboto-v20-latin_cyrillic-900.woff2" as="font" type="font/woff2" crossorigin>
+	<!-- <link rel="preload" href="fonts/roboto-v20-latin_cyrillic-900.woff" as="font" type="font/woff2" crossorigin> -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="body">
+	<div class="popup-container">
+		<form class="popup-form">
+			<label for="popup-name">* Ваше имя:</label><br>
+			<input type="text" autocomplete="off" name="popup-name" id="popup-name"><br>
+			<label for="popup-phone">* Номер телефона:</label><br>
+			<input type="tel" autocomplete="off" name="popup-phone" id="popup-phone" value=""><br>
+			<label for="popup-mail">* E-Mail</label><br>
+			<input type="email" autocomplete="off" name="popup-mail" id="popup-mail"><br>
+			<button type="submit" id="send">Заказать</button>
+		</form>
+	</div>
+	<header class="header">
+		<div class="nav-container">
+			<!-- НАВИГАЦИЯ -->
+
+			<div class="nav-wrapper">
+
+				<!-- Навигация для десктопа -->
+
+				<ul class="nav">
+					<li class="nav__items"><a href="#what" class="nav__link">Услуги</a></li>
+					<li class="nav__items"><a href="#Portfolio" class="nav__link">Портфолио</a></li>
+					<li class="nav__items"><a href="#price" class="nav__link">Стоимость</a></li>
+				</ul>
+
+				<!-- Кнопка для мобильной навигации -->
+
+				<div id="menu-togle" class="menu-icon scroll-on">
+					<div class="menu-icon-line"></div>
+				</div>
+
+				<!-- Мобильная навигация -->
+
+				<div id="mobile-nav" class="mobile-nav">
+					<div class="mobile-nav__title">Навигация</div>
+					<ul class="mobile-nav__list">
+						<li class="mobile-nav__item"><a href="#what" class="mobile-nav__link">Услуги</a></li>
+						<li class="mobile-nav__item"><a href="#Portfolio" class="mobile-nav__link">Портфолио</a></li>
+						<li class="mobile-nav__item"><a href="#price" class="mobile-nav__link">Стоимость</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="feedback">
+				<ul class="feedback__list">
+					<li><a href="tel:+74999955555" class="phone">+7 (499) 995-55-77</a></li>
+					<li><a href="#" class="phone__butn clk">Заказать звонок</a></li>
+					<li><a href="#"><i class="fa fa-phone phone__butn__min clk"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bg">
+			<!-- летающие теги -->
+			<div class="header__content">
+				<div class="left__column">
+					<div class="left-column__float">
+						<p class="float-text float1">&lt;/a&gt;</p>
+						<p class="float-text float3">&lt;#id&gt;</p>
+						<p class="float-text float2">&lt;href&gt;</p>
+					</div>
+					<ul class="left__text">
+						<li class="name">Александр Кондаков</li>
+						<li class="about">Frontend-разработчик и веб-верстальщик</li>
+						<li class="about__btn clk"><a href="#">Узнать больше</a></li>
+					</ul>
+				</div>
+				<img class="header__img1" src="img/light2.png" alt="">
+				<img class="header__img2" src="img/light2.png" alt="">
+			</div>
+		</div>
+	</header>
+	<div id="what" class="central__content">
+		<div class="what">
+			<p>Что я делаю</p>
+		</div>
+		<div class="central__content__list">
+			<ul class="what__list">
+				<li>
+					<img src="img/1.png" alt="ico">
+					<p>Вёрстка лендинг–страниц и сайтов любой сложности</p>
+				</li>
+				<li>
+					<img src="img/2.png" alt="ico">
+					<p>Адаптивная вёрстка под все браузеры и устройства</p>
+				</li>
+				<li>
+					<img src="img/3.png" alt="ico">
+					<p>Frontend–разработка и программирование</p>
+				</li>
+				<li>
+					<img src="img/4.png" alt="ico">
+					<p>Исправление и доработка существующей вёрстки</p>
+				</li>
+			</ul>
+		</div>
+		<div class="how__much about__btn">
+			<a class="about__btn clk" href="#">Узнать больше</a>
+		</div>
+		<div id="Portfolio" class="what">
+			<p>Примеры моих работ</p>
+		</div>
+		<div class="swiper-container">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide"><img src="img/slide1.png" alt=""><p>Сайт психолога Веры Антоновой</p></div>
+				<div class="swiper-slide"><img src="img/slide2.png" alt=""><p>Сайт магазина детской одежды</p></div>
+				<div class="swiper-slide"><img src="img/slide3.png" alt=""><p>Сайт магазина «Рыболов»</p></div>
+				...
+			</div>
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+		<div class="order about__btn clk">
+			<a href="#">Заказать проект</a>
+		</div>
+	</div>
+	<div id="price" class="foo">
+		<div class="float-text-bottom">
+			<span>{&nbsp;}</span>
+			<span>&lt;/&gt;</span>
+			<span>{&nbsp;}</span>
+			<span>#</span>
+			<span>&lt;div&gt;</span>
+		</div>
+		<p class="foo_text_big">
+			Адаптивная вёрстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*
+		</p>
+		<p class="foo_text_min">
+			* Срок и стоимость могут отличаться от заявленных и рассчитываются  индивидуально, в зависимости от сложности задач.
+		</p>
+	</div>
+	<footer class="after__foo">
+		<div class="left__foo__list">
+			<ul>
+				<li><a href="#what">Услуги</a></li>
+				<li><a href="#Portfolio">Портфолио</a></li>
+				<li><a href="#price">Стоимость</a></li>
+			</ul>
+		</div>
+		<div class="center__foo__list">
+			<ul>
+				<li><a href="tel:+74999955555" class="phone2"><i class="fa fa-phone"></i>+7 (499) 995-55-77</a></li>
+				<li><a href="mailto:alexandr21-1989@mail.ru" class="phone2"><i class="fa fa-envelope"></i>alexandr21-1989@mail.ru</a></li>
+			</ul>
+		</div>
+		<div class="right__foo__list">
+			<ul>
+				<li><a href="#" class="phone__butn2 clk">Заказать звонок</a></li>
+				<li>
+					<ul class="soc">
+						<li class="vk">
+							<div><a href="https://vk.com/"  class="icon"></a></div>
+						</li>
+						<li class="fb">
+							<div><a href="https://www.facebook.com/"  class="icon"></a></div>
+						</li>
+						<li class="tw">
+							<div><a href="https://twitter.com/"  class="icon"></a></div>
+						</li>
+						<li class="in">
+							<div><a href="https://www.instagram.com/"  class="icon"></a></div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<div class="copy">
+		<p>© Александр Кондаков, 2020 г.</p>
+	</div>
+
+
+	<script src="script/jquery-3.4.1.min.js"></script>
+	<script src="script/swiper.min.js"></script>
+	<script src="script/jquery.inputmask.min.js"></script>
+	<!-- <script src="script/jquery.formstyler.min.js"></script> -->
+	<script src="script/jquery.validate.min.js"></script>
+	<script src="script/script.js"></script>
+</body>
+</html>
