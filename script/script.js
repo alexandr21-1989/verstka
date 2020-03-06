@@ -44,45 +44,53 @@ $(document).ready(function(){
   });
   $('.popup-container').click(function(){
     $(this).removeClass('active');
+    $('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" });
+  });
+  $('#popup-name').on('keypress', function() {
+    let that = this;
+    setTimeout(function() {
+      let res = /[^а-яА-Яa-zA-Z]/g.exec(that.value);
+      that.value = that.value.replace(res, '');
+    }, 0);
   });
   $('.popup-form').click(function(){
     return false;
   });
-  $('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" }); //specifying options$('form').each(function () {
-				$('.popup-form').validate({
-					errorPlacement(error, element) {
-						return true;
-					},
-					focusInvalid: false,
-					rules: {
-						'popup-phone': {
-              required: true,
-						},
-            'popup-mail': {
-              required: true,
-              email: true,
-              maxlength: 30,
-            },
-            'popup-name': {
-              required: true,
-              maxlength: 30,
-              minlength: 2,
-            },
-					},
-					submitHandler(form) {
-            let th = $(form);
-            $.ajax({
-              type: 'POST',
-              url: 'mail.php',
-              data: th.serialize(),
-            }).done(() => {
-              console.log('llll');
-              th.trigger('reset');
-            });
-              console.log('gggg');
-              return false;
-          },
+  $('#send').click(function(){
+        let name = $('#popup-name').val();
+        let phone = $('#popup-phone').val();
+        let mail = $('#popup-mail').val();
+      if(name != '' && phone != '' && mail != ''){
+        let th = $('.popup-form');
+        $.ajax({
+          type: 'POST',
+          url: '../mail.php', // Обработчик собственно
+          data: th.serialize(),
+          success: function(data) {
+          }
         });
+        $('.popup-form')[0].reset();
+        $('.popup-container').removeClass('active');
+        }
+      else{
+        if(name == ''){
+          $('#popup-name').addClass('error');
+        }
+        else if(phone == ''){
+          $('#popup-phone').addClass('error');
+        }
+        else if(mail == ''){
+          $('#popup-mail').addClass('error');
+        }
+
+        setTimeout(function(){
+          $('#popup-name').removeClass('error');
+          $('#popup-phone').removeClass('error');
+          $('#popup-mail').removeClass('error');
+        }, 2000);
+        return false;
+      }
+    });
 });
 
 var mySwiper = new Swiper ('.swiper-container', {

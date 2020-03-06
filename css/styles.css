@@ -279,6 +279,7 @@ body.lock{
 }
 .error{
 	background-color: rgba(255, 0, 0, 0.342);
+	border: 1px solid red !important;
 }
 .swiper-slide p{
 	margin-top: 25px;
