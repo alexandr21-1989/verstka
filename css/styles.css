@@ -226,61 +226,6 @@ body.lock{
 	background: linear-gradient(10deg, rgba(255, 141, 92, 0.6) 0%, rgba(255,47,150, 0.6) 100%);
     transition: transform 0.4s ease-in;
 }
-.popup-container{
-	display: none;
-}
-.popup-container.active{
-	display: block;
-	position: fixed;
-	background: rgba(255, 141, 92, 0.603);
-	background: linear-gradient(10deg, rgba(255, 141, 92, 0.6) 0%, rgba(255,47,150, 0.6) 100%);
-	width: 100%;
-	height: 100%;
-	z-index: 10;
-	overflow: hidden;
-}
-.popup-form{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	min-width: 300px;
-	transform: translate(-50%, -50%);
-	font-size: 16px;
-	background-color: white;
-	padding: 30px 10px;
-	border-radius: 10px;
-	text-align: center;
-}
-.popup-form input{
-	position: relative;
-	margin: 0 10px 20px 10px;
-	width: 90%;
-	height: 35px;
-	border: 0;
-	border-bottom: 1px solid #ff4d2e;
-	padding: 5px 10px;
-	font-size: 14px;
-	font-weight: 400;
-	text-align: center;
-}
-.popup-form input:focus{
-	outline: none;
-	border-bottom: 1px solid #ecaea3;
-}
-.popup-form button{
-	padding: 12px 30px;
-	font-size: 16px;
-	color: #fff;
-	background-color: #ff4e2e;
-	border: none;
-	border-radius: 2px;
-	cursor: pointer;
-	outline: none;
-}
-.error{
-	background-color: rgba(255, 0, 0, 0.342);
-	border: 1px solid red !important;
-}
 .swiper-slide p{
 	margin-top: 25px;
 }

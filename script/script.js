@@ -37,60 +37,6 @@ $(document).ready(function(){
   };
     $('#menu-togle').click(lockScroll);
     $('.mobile-nav__item').click(lockScroll);
-
-  $('.clk').click(function(e){
-    e.preventDefault();
-    $('.popup-container').addClass('active');
-  });
-  $('.popup-container').click(function(){
-    $(this).removeClass('active');
-    $('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" });
-  });
-  $('#popup-name').on('keypress', function() {
-    let that = this;
-    setTimeout(function() {
-      let res = /[^а-яА-Яa-zA-Z]/g.exec(that.value);
-      that.value = that.value.replace(res, '');
-    }, 0);
-  });
-  $('.popup-form').click(function(){
-    return false;
-  });
-  $('#send').click(function(){
-        let name = $('#popup-name').val();
-        let phone = $('#popup-phone').val();
-        let mail = $('#popup-mail').val();
-      if(name != '' && phone != '' && mail != ''){
-        let th = $('.popup-form');
-        $.ajax({
-          type: 'POST',
-          url: '../mail.php', // Обработчик собственно
-          data: th.serialize(),
-          success: function(data) {
-          }
-        });
-        $('.popup-form')[0].reset();
-        $('.popup-container').removeClass('active');
-        }
-      else{
-        if(name == ''){
-          $('#popup-name').addClass('error');
-        }
-        else if(phone == ''){
-          $('#popup-phone').addClass('error');
-        }
-        else if(mail == ''){
-          $('#popup-mail').addClass('error');
-        }
-
-        setTimeout(function(){
-          $('#popup-name').removeClass('error');
-          $('#popup-phone').removeClass('error');
-          $('#popup-mail').removeClass('error');
-        }, 2000);
-        return false;
-      }
-    });
 });
 
 var mySwiper = new Swiper ('.swiper-container', {
